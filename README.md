@@ -8,7 +8,7 @@
 
 ### Current unsupervised denoising methods overlook signal sparsity, suffering from redundant parameters, low interpretability. ISANet, an unsupervised denoising network based on interpretable sparse attention U-Net. This Net is composed of the following parts.
  - Step 1:  A window of size `W_t​` $\times$ `W_x` is adopted to perform patching processing on the data `D` with dimensions `N_t` $\times$ `N_x`. Therefore, D_{patch} is obtained.
- - Step 2: All data D <sub> patch </sub> is split at a ratio of 8:2, with 80% allocated to the training set and the remaining 20% to the validation set.
+ - Step 2: All data` D _patch `is split at a ratio of 8:2, with 80% allocated to the training set and the remaining 20% to the validation set.
  - Step 3: Noisy data is used for training.` Median Filter`, `ISAnet` and `PatchUnet` are adopted to test and compare the denoising performance.
 --The trained network parameters are saved as `xx.pth` file
  - Setp 4: The visualization module is used to analyze patch data of specific features and observe the performance of different output layers of the network, which provides direct evidence for the interpretability of the network.
@@ -31,8 +31,16 @@
 - `medianFilter`：Both the denoising networks of Median filter for synthetic data and field data are stored here, including both 2D and 3D versions.
 - `Visualization module`：`Visualization.ipynb` for the visualization of network parameters.
 
- :boom: **Note Only one type of seismic data is presented here. If you are interested in other datasets, you can replace the corresponding input `.pth` model parameters and patch data  D <sub> patch </sub> .** 
+ :boom: **Note Only one type of seismic data is presented here. If you are interested in other datasets, you can replace the corresponding input `.pth` model parameters and patch data  `D_patch` .** 
 ## The network structure of the proposed method is shown below:
-![ISAnet](https://github.com/furser1/ISAnet/blob/main/1.png)
+![ISAnet](https://github.com/furser1/ISAnet/blob/main/Fig/1.png)
+## Example
+### Taking synthetic 2D seismic data as an example
+- The figure below shows the clean data and the data contaminated by irrelevant noise. It contains one set of horizontal events and two sets of intersecting dipping events.
+![syn2d](https://github.com/furser1/ISAnet/blob/main/Fig/3.png)
 
+- Taking a trained model to analyze the data within a certain patch window, the results are presented as follows. It can be observed from the figure that with the increase of network depth, the sparse patch attention mechanism can better capture the difference between effective signals and noise.
+![synint](https://github.com/furser1/ISAnet/blob/main/Fig/12.png)
 
+- By analyzing the discreteness of features extracted from different layers, we find that the data discreteness becomes increasingly obvious as the network depth increases. This indicates that the network can effectively identify and distinguish valid signals from irrelevant noise.
+![synint](https://github.com/furser1/ISAnet/blob/main/Fig/13.png)
