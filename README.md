@@ -32,6 +32,7 @@
 - `Visualization module`：`Visualization.ipynb` for the visualization of network parameters.
 
  :boom: **Note Only one type of seismic data is presented here. If you are interested in other datasets, you can replace the corresponding input `.pth` model parameters and patch data `D_{patch}`.** 
-
+## 
+![The network structure of the proposed method is shown below.](https://github.com/furser1/ISAnet/blob/main/1.png)
 
 
