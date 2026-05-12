@@ -7,8 +7,8 @@
 ## :star:  Overview
 
 ### Current unsupervised denoising methods overlook signal sparsity, suffering from redundant parameters, low interpretability. ISANet, an unsupervised denoising network based on interpretable sparse attention U-Net. This Net is composed of the following parts.
- - Step 1:  A window of size `W_t​` ×`W_x` is adopted to perform patching processing on the data `D` with dimensions `N_t`×`N_x`. Therefore, D_{patch} is obtained.
- - Step 2: All data `D_{patch}` is split at a ratio of 8:2, with 80% allocated to the training set and the remaining 20% to the validation set.
+ - Step 1:  A window of size `W_t​` $\times$ `W_x` is adopted to perform patching processing on the data `D` with dimensions `N_t` $\times$ `N_x`. Therefore, D_{patch} is obtained.
+ - Step 2: All data D <sub> patch </sub> is split at a ratio of 8:2, with 80% allocated to the training set and the remaining 20% to the validation set.
  - Step 3: Noisy data is used for training.` Median Filter`, `ISAnet` and `PatchUnet` are adopted to test and compare the denoising performance.
 --The trained network parameters are saved as `xx.pth` file
  - Setp 4: The visualization module is used to analyze patch data of specific features and observe the performance of different output layers of the network, which provides direct evidence for the interpretability of the network.
@@ -31,7 +31,7 @@
 - `medianFilter`：Both the denoising networks of Median filter for synthetic data and field data are stored here, including both 2D and 3D versions.
 - `Visualization module`：`Visualization.ipynb` for the visualization of network parameters.
 
- :boom: **Note Only one type of seismic data is presented here. If you are interested in other datasets, you can replace the corresponding input `.pth` model parameters and patch data `D_{patch}`.** 
+ :boom: **Note Only one type of seismic data is presented here. If you are interested in other datasets, you can replace the corresponding input `.pth` model parameters and patch data  D <sub> patch </sub> .** 
 ## The network structure of the proposed method is shown below
 ![ISAnet](https://github.com/furser1/ISAnet/blob/main/1.png)
 
