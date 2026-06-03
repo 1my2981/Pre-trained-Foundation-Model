@@ -22,7 +22,7 @@
 |real2d   |512 $\times$ 128   |   30 $\times$ 30   | 1 $\times$ 1   |47817 |
 |real3d   |256 $\times$ 64 $\times$ 48 |  20 $\times$ 15 $\times$ 15 | 2 $\times$ 2 $\times$ 2 |55692 |
 #  :rocket:  File Description
-- `Pre-trained Foundation Model`：Both the denoising networks of Pre-trained Foundation Model during during the fine-tunning stage for synthetic data and field data are stored here, including both 2D and 3D versions.
+- `Fine-tuning`：Both the denoising networks of Pre-trained Foundation Model during the fine-tuning stage for synthetic data and field data are stored here, including both 2D and 3D versions.
 - `PatchUnet`：Both the denoising networks of PatchUnet for synthetic data and field data are stored here, including both 2D and 3D versions.
 - `medianFilter`：Both the denoising networks of Median filter for synthetic data and field data are stored here, including both 2D and 3D versions.
  :boom: **Note Only one type of seismic data is presented here. If you are interested in other datasets, you can replace the corresponding input `.pth` model parameters and patch data  `D_patch` .** 
