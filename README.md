@@ -13,10 +13,12 @@
  - Step 3: Target noisy data is used for training.` Median Filter`, `Pre-trained Foundation Model` and `PatchUnet` are adopted to test and compare the denoising performance.
 --The trained network parameters are saved as `xx.pth` file
 ---
-- `data`：All **data** is stored in this folder, including: `seis2dsyn.mat`, `seis3dsyn.mat`, `real2d.mat`, `real3d.mat`
+- `data`：All **data** is stored in this folder, including: `Amirsyn.mat`,`Amirsyn2d.mat`,`seis2dsyn.mat`, `seis3dsyn.mat`, `real2d.mat`, `real3d.mat`
 
 |name     |data size|Patch size|Slid size|Patches|
 | :--------|:--- | :----- | :-------- |:-------- |
+|Amirsyn2d| 500 $\times$ 700   |   30 $\times$ 30   | 4 $\times$ 4   |20111 |
+|Amirsyn| 500 $\times$ 35 $\times$ 40 |  20 $\times$ 15 $\times$ 15 | 4 $\times$ 2 $\times$ 2 |18634 |
 |seis2dsyn| 512 $\times$ 64   |   30 $\times$ 30   | 1 $\times$ 1   |16905 |
 |seis3dsyn| 401 $\times$ 64 $\times$ 64 |  20 $\times$ 15 $\times$ 15 | 4 $\times$ 2 $\times$ 2 |65572 |
 |real2d   |512 $\times$ 128   |   30 $\times$ 30   | 1 $\times$ 1   |47817 |
